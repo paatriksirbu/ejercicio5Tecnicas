@@ -10,13 +10,16 @@ public class AnalisisDeCalificaciones {
     public static void main(String[] args) {
         int opcion = 0;
 
-        while (opcion !=4) {
-            System.out.println("\nBienvenido al sistema de calificaciones");
-            System.out.println("\nIntroduzca su eleccion: (1-4)");
+        System.out.println("\nBienvenido al sistema de calificaciones");
+
+        while (opcion !=5) {
+
+            System.out.println("\nIntroduzca su eleccion: (1-5)");
             System.out.println("1. Introducir calificaciones");
             System.out.println("2. Mostrar calificaciones");
-            System.out.println("3. Obtener nota media");
-            System.out.println("4. Salir");
+            System.out.println("3. Mostrar calificaciones Ordenadas");
+            System.out.println("4. Obtener nota media");
+            System.out.println("5. Salir");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -26,12 +29,15 @@ public class AnalisisDeCalificaciones {
                     Calificaciones.obtenerNota(sc);
                     break;
                 case 2:
-                    Calificaciones.obtenerMedia();
-                    break;
-                case 3:
                     Calificaciones.mostrarCalificaciones();
                     break;
+                case 3:
+                    Calificaciones.mostrarCalificacionesOrdenadas();
+                    break;
                 case 4:
+                    Calificaciones.obtenerMedia();
+                    break;
+                case 5:
                     System.out.println("Saliendo del sistema..." +
                             "\nHasta luego!");
                     System.exit(0);

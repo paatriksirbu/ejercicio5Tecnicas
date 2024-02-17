@@ -38,6 +38,29 @@ public class Calificaciones {
         System.out.printf("La nota media es: %.2f \n", media);
     }
 
+    public static void mostrarCalificaciones() {
+        if (calificaciones.isEmpty()) {
+            System.out.println("No hay calificaciones para mostrar");
+            return;
+        }
+        System.out.println("Las calificaciones son: ");
+        for (int i = 0; i < calificaciones.size(); i++) {
+            System.out.println(calificaciones.get(i));
+        }
+    }
+
+    public static void mostrarCalificacionesOrdenadas() {
+        if (calificaciones.isEmpty()) {
+            System.out.println("No hay calificaciones para mostrar");
+            return;
+        }
+        Collections.sort(calificaciones);
+        System.out.println("Las calificaciones ordenadas de menor a mayor son: ");
+        for (int i = 0; i < calificaciones.size(); i++) {
+            System.out.println(calificaciones.get(i));
+        }
+    }
+
 
 
 }
