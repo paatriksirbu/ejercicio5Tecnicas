@@ -1,11 +1,13 @@
 package ejercicio3;
 import java.util.*;
 
+// Clase Calificaciones
 public class Calificaciones {
+
 
     static ArrayList<Double> calificaciones = new ArrayList<>();
 
-
+// Método para obtener la nota, donde solo se anaden las notas validas
     public static void obtenerNota(Scanner sc){
         char respuesta;
 
@@ -24,20 +26,21 @@ public class Calificaciones {
         } while (respuesta == 'y');
     }
     public static void obtenerMedia() {
-
+        // Si no hay calificaciones, se imprime un mensaje y se retorna
         if (calificaciones.isEmpty()) {
             System.out.println("No hay calificaciones para calcular la nota media");
             return;
         }
-
+        // Se suman todas las calificaciones del array
         double suma = 0;
         for (int i = 0; i < calificaciones.size(); i++) {
             suma += calificaciones.get(i);
         }
+        // Se calcula la media dividiendo la suma entre el numero de calificaciones
         double media = suma / calificaciones.size();
-        System.out.printf("La nota media es: %.2f \n", media);
+        System.out.printf("La nota media es: %.2f \n", media);  // Se imprime la media con dos decimales
     }
-
+    // Método para mostrar las calificaciones
     public static void mostrarCalificaciones() {
         if (calificaciones.isEmpty()) {
             System.out.println("No hay calificaciones para mostrar");
@@ -48,7 +51,7 @@ public class Calificaciones {
             System.out.println(calificaciones.get(i));
         }
     }
-
+    // Método para mostrar las calificaciones ordenadas
     public static void mostrarCalificacionesOrdenadas() {
         if (calificaciones.isEmpty()) {
             System.out.println("No hay calificaciones para mostrar");

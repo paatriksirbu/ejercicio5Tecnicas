@@ -6,13 +6,14 @@ public class AnalisisDeCalificaciones {
     private static Calificaciones calificaciones = new Calificaciones();
     private static Scanner sc = new Scanner(System.in);
 
+    // Método main
 
     public static void main(String[] args) {
         int opcion = 0;
 
         System.out.println("\nBienvenido al sistema de calificaciones");
 
-        while (opcion !=5) {
+        while (opcion !=5) {    // Mientras la opcion no sea 5, se ejecuta el menu
 
             System.out.println("\nIntroduzca su eleccion: (1-5)");
             System.out.println("1. Introducir calificaciones");
@@ -47,7 +48,7 @@ public class AnalisisDeCalificaciones {
                     break;
             }
 
-        }
+        } sc.close();
 
     }
 }
